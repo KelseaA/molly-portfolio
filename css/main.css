@@ -1,0 +1,628 @@
+/****************************************
+            General Styling
+*****************************************/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.header,
+.logo-name,
+#splash,
+.headline,
+.scroll,
+.process-container,
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-name,
+.nav a,
+.title,
+.scroll-text,
+h2,
+h3,
+h5{
+    text-transform: uppercase;
+}
+
+#splash,
+#about,
+#tools{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    max-width: 100%;
+}
+
+.title,
+h2,
+h3,
+h5{
+    font-weight: bold;
+}
+
+#portfolio,
+#process,
+#contact{
+    background-color: #F7F7F7;
+    padding-bottom: 4em;
+}
+
+#about h2,
+#tools h2{
+    padding: 4em 0 1.5em 0;
+}
+
+.hamburger{
+    display: none;
+}
+
+/****************************************
+            Header Styling
+*****************************************/
+
+.header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1600px;
+    z-index: 1;
+}
+
+.logo{
+    max-width: 2.5em;
+    max-height: 2.5em;
+    margin: 0 .2em;
+}
+
+.nav-name{
+    font-size: 1.75em;
+    font-weight: 200;
+    margin-left: .2em;
+}
+
+.nav{
+    padding: 15px 0;
+    margin-right: .5em;
+}
+
+.nav ul{
+    list-style-type: none;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.nav a{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    margin: .75em;
+    padding: .25em 0;
+}
+
+.nav a:hover{
+    border-bottom: 2px solid #333;
+}
+
+/****************************************
+            Splash Styling
+*****************************************/
+
+#splash{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)),
+        url("../images/computer-view.jpg") no-repeat fixed center center;
+    height: 45em;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.headline{
+    width: 650px;
+}
+
+.title,
+.intro{
+    color: #fff;
+    margin: 0;
+    width: 300px;
+}
+
+.title{
+    font-size: 2.7em;
+    text-align: right;
+    margin-right: .75em;
+    padding-top: .1em;
+}
+
+.intro{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin-left: .75em;
+    text-shadow: 2px 2px #333;
+    font-weight: 400;
+}
+
+.scroll{
+    flex-direction: column;
+    position: absolute;
+    bottom: 3em;
+}
+
+.scroll-text{
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.scroll-arrow::before {
+    color: #fff;
+    border-style: solid;
+    border-width: 0.2em 0.2em 0 0;
+    content: '';
+    display: inline-block;
+    height: 2em;
+    left: 0.2em;
+    position: relative;
+    top: 0.2em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 2em;
+    top: 0;
+    transform: rotate(135deg);
+}
+
+h2,
+h3{
+    letter-spacing: .2em;
+}
+
+h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 3em;
+}
+
+h3{
+    font-size: 1.2em;
+    margin-top: .75em;
+}
+
+/****************************************
+            Portfolio Styling
+*****************************************/
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.project{
+    display: inline-block;
+    margin-top: 2em;
+    width: 45%;
+}
+
+.project img{
+    max-width: 100%;
+}
+
+.project p{
+    padding: .3em 0;
+}
+
+.featured{
+    width: 100%;
+}
+
+.column1,
+.column2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/****************************************
+            About Styling
+*****************************************/
+
+#about{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)),
+        url("../images/working-desk-view.jpg") no-repeat fixed center left;
+    background-size: cover;
+    height: 23em;
+}
+
+#about h2,
+#about p{
+    color: #fff;
+    text-shadow: 2px 2px #333;
+}
+
+#about p{
+    font-size: 1.25em;
+    width: 50%;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.25em;
+}
+
+/****************************************
+            Process Styling
+*****************************************/
+
+.process-container{
+    width: 58%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.card{
+    width: 29%;
+    height: 23em;
+    border-top: 8px solid #648FDE;
+    margin-bottom: 2em;
+    position: relative;
+    background-color: #fff;
+    box-shadow:
+        2px 2px 2px #efefef,
+        2px 2px 2px #efefef;
+}
+
+.card img{
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.card ul{
+    padding: 1em .75em;
+}
+
+.card li{
+    font-size: .85em;
+    line-height: 2.5em;
+    margin-left: 1em;
+}
+
+h5{
+    font-size: 1em;
+    text-align: center;
+}
+
+/****************************************
+            Tools Styling
+*****************************************/
+
+#tools{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)),
+        url("../images/desk-view.jpg") no-repeat fixed center center;
+    background-size: cover;
+    height: 24em;
+}
+
+#tools h2,
+#tools h3{
+    color: #fff;
+}
+
+#tools h3{
+    font-size: 1.1em;
+    text-transform: inherit;
+    text-align: center;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+.tools-icons{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.tool-icon{
+    width: auto;
+    height: 3em;
+    padding: 0 1.5em;
+}
+
+.flinto,
+.zeplin,
+.adobe{
+    height: 3.75em;
+}
+
+/****************************************
+            Contact Styling
+*****************************************/
+
+.contact-container{
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.headshot img{
+    width: 13em;
+    margin-right: 1.5em;
+}
+
+.contact-column{
+    margin-left: 1.5em;
+}
+
+.contact-icon{
+    height: 3em;
+    margin-right: 2.5em;
+}
+
+.phone,
+.email{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.social-icon{
+    height: 2.5em;
+    margin-right: 1.25em;
+}
+
+.social-icon:nth-child(2),
+.social-icon:nth-child(3){
+    margin: 0 1em;
+}
+
+.email .contact-icon{
+    width: 2.25em;
+    height: 2.5em;
+}
+
+/****************************************
+            Footer Styling
+*****************************************/
+
+footer{
+    padding: 2em 0;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+@media screen and (max-width: 1150px){
+    #about h2{
+        padding-top: 2.5em;
+    }
+    .process-container {
+        width: 90%;
+    }
+    #tools h3{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #splash{
+        height: 40em;
+    }
+    .headline {
+        flex-direction: column;
+        width: 75%;
+    }
+    .title,
+    .intro{
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+    .title{
+        padding-bottom: .5em;
+        font-size: 2.5em;
+    }
+    #about p {
+        font-size: 1.25em;
+        width: 75%;
+    }
+    .project-container {
+        width: 90%;
+    }
+    .process-container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card{
+        height: 21em;
+    }
+    .card li{
+        font-size: .82em;
+        line-height: 2em;
+    }
+    .tool-icon{
+        height: 2.5em;
+        padding: 0 .75em;
+    }
+    .flinto,
+    .zeplin,
+    .adobe{
+        height: 3em;
+    }
+    .headshot img {
+        width: 10em;
+    }
+    .phone, .email {
+        margin-bottom: .5em;
+    }
+    .contact-icon {
+        margin-right: 1.75em;
+    }
+
+    .hamburger{
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: .1rem;
+        z-index: 1000;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 1.76em;
+        height: 2px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-3px, 6px) ;
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-6px, -8px) ;
+    }
+    .nav{
+        position: relative;
+    }
+    .nav ul{
+        z-index: 999;
+        position: absolute;
+        top: 1.5em;
+        right: -.5em;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        background-color: #fff;
+        margin: 0;
+        padding: 1.27em 2em;
+    }
+    .menu{
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .open{
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 550px){
+    h3{
+        margin-top: .5em;
+    }
+    #splash{
+        height: 32em;
+    }
+    .title {
+        font-size: 2em;
+    }
+    .intro {
+        font-size: 1.1em;
+        line-height: 1.4em;
+    }
+    .column1,
+    .column2 {
+        flex-direction: column;
+    }
+    .project {
+        width: 100%;
+    }
+    #about p {
+        font-size: 1.1em;
+        width: 90%;
+    }
+    .process-container{
+        width: 75%;
+    }
+    .card {
+        width: 100%;
+        height: 27em;
+    }
+    .tool-icon{
+        height: 2em;
+        padding: 0 .5em;
+    }
+    .flinto,
+    .zeplin,
+    .adobe{
+        height: 2.5em;
+    }
+    .headshot{
+        display: none;
+    }
+    .contact-column{
+        margin: 0;
+    }
+    .social-media{
+        text-align: center;
+    }
+    .social-icon{
+        margin: 0;
+        padding: 0 1.8em;
+    }
+    .pinterest{
+        padding-left: 0;
+    }
+    .medium{
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 400px){
+    .card {
+        height: 24em;
+    }
+    .tool-icon{
+        height: 1.75em;
+        padding: 0 .3em;
+    }
+    .flinto,
+    .zeplin,
+    .adobe{
+        height: 2.25em;
+    }
+}
+
+
+
+
+
+
+
